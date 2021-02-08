@@ -1,0 +1,31 @@
+html{
+    height: 100%;
+    width: 100;
+    margin: 1em;
+}
+
+h1{
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+nav > * {
+    padding: 1em;
+}
+
+nav h2{
+    background-color: rgb(71, 52, 122);
+    color: white;
+}
+
+nav h2:hover{
+    background-color: rgb(105, 80, 175);
+}
