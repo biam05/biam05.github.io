@@ -1,16 +1,3 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
-
-ul{
-	list-style:none;
-}
-a{
-	text-decoration:none;
-}
-
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -23,6 +10,7 @@ nav {
 
 nav ul{
 	display: flex;
+	list-style:none;
 }
 .toggle{
 	display: none;
@@ -31,15 +19,17 @@ nav ul{
 nav ul li { 
 	display: table-cell; 
 	position: relative; 
-	padding: 15px 0;
+	font-family: 'Slabo 27px', serif;
+	padding: 7px 0;
+	font-weight: 700;
+	text-align: center;
+	width: 8em;
 }
 
-nav ul li a{
-	margin:30px;
-	font-family:myriad pro regular;
+nav a{
 	color:#505050;
 	font-size: 15px;
-	font-weight:700;
+	text-decoration:none;
 }
 
 nav ul li a:after{
@@ -50,18 +40,19 @@ nav ul li a:after{
 	height: 2px;
 	left: 50%;
 	position: absolute;
-	background: #505050;
+	background: #797979;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 }
 
-nav ul li a:hover:after { 
+nav ul li a:hover:after{ 
 	width: 100%; 
 	left: 0; 
 }
 
 .logo{
-	font-family:RoadTest;
-	color:#000000;
+	color:#505050;
+	font-family: 'Slabo 27px', serif;
+	padding: 7px 0;
 	font-size: 22px;
 }
