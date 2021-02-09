@@ -1,32 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Beatriz Mendes' Page</title>
+    <head>
+        <title>Beatriz Mendes' Page</title>
 
-    <!--favicon-->
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+        <script src="script.js"></script>
 
-    <!--css used-->
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/main.css">
+        <!--favicon-->
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
-</head>
-<body>
-    <section>
+        <!--css used-->
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/contacts.css">
+
+        <!--google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+
+        <!--icon library-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!--navigation bar-->
         <nav>
             <!--logo-->
-            <a href="index.html" class="logo">Beatriz Mendes</a>
+            <a href="#hero" class="logo">Beatriz Mendes</a>
             <!--menu-->
             <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="templates/about.html">About</a></li>
-            <li><a href="templates/contacts.html">Contacts</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contacts</a></li>
             </ul>
-            <!--bars--------------->
+            <!--bars-->
             <div class="toggle"></div>        
         </nav>
-    </section>
-</body>
+
+        <main>
+            <section id="hero">
+                <div class="section-inner">
+                    <img class="profile-img" src="images/profilephoto.png">
+                    <h1>Oh, hey there!</h1>
+                    <h2>I'm Beatriz Mendes, nice to meet you!</h2>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="section-inner">
+                    <h2>About me</h2>
+                    <p>I'm a Student @ FEUP, Informatics and Computing Engineering that wants
+                        to work on some new projects outside of college. My main objective
+                        is to inspire others to get creative and embrace new challenges.
+                    </p>
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li>I coded this website, 2021</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="section-inner">
+                    <h2>Contact me</h2>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-github"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <p>Or, you can <a href="beatrizcsmendes@gmail.com">send me an email</a>.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            Copyright ©2021 All rights reserved | Made with ♥ by Yours Truly
+        </footer>    
+    </body>
 </html>
