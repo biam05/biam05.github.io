@@ -1,15 +1,16 @@
 /* Style all font awesome icons */
-.fa {
+.fa-facebook, .fa-github, .fa-linkedin {
     padding: 20px;
-    width: 37px;
+    font-size: 40px;
+    width: 17px;
     text-align: center;
     text-decoration: none;
-    background: #2c2c2c;
-    color: white;
-    transition: .8s;
+    border-radius: 50%;
+    background-color: #30a1ac;
+    color: #e3f8fa;
+    transition: .3s;
 }
   
-.fa:hover {
-    background-color: white;
-    color: #2c2c2c;
+.fa-facebook:hover, .fa-github:hover, .fa-linkedin:hover {
+    background-color: #59c9d3;
 }

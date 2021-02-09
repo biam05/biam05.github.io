@@ -46,7 +46,7 @@ nav ul li a:after{
 	width: 0;
 }
 
-nav ul li a:hover:after, nav ul li.current a:after{ 
+nav ul li a:hover:after{ 
 	width: 100%; 
 	left: 0; 
 }
