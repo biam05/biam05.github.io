@@ -23,7 +23,7 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="logo" href="#top" aria-label="Beatriz Mendes">bm<span class="dot"></span></a>
+    <a class="logo" href="#top">bm<span class="sr-only"> Beatriz Mendes</span><span class="dot"></span></a>
     <nav class="nav">
       <a href="#about" style="--hl: var(--butter)" data-i18n="nav.about">About</a>
       <a href="#work" style="--hl: var(--sky)" data-i18n="nav.work">Work</a>
@@ -58,7 +58,7 @@
         <span class="blob blob-1" aria-hidden="true"></span>
         <span class="blob blob-2" aria-hidden="true"></span>
         <span class="blob blob-3" aria-hidden="true"></span>
-        <img src="media/me.jpg" width="420" height="420" alt="Beatriz smiling" data-i18n-alt="hero.photoAlt">
+        <img src="media/me.webp" srcset="media/me-400.webp 400w, media/me.webp 840w" sizes="(max-width: 720px) 260px, 380px" width="420" height="420" fetchpriority="high" alt="Beatriz smiling" data-i18n-alt="hero.photoAlt">
         <figcaption class="note" data-i18n="hero.note">that's me!</figcaption>
       </figure>
     </section>
@@ -192,16 +192,16 @@
       <div class="cards">
         <article class="card card-feature" style="--c: var(--butter)">
           <div class="card-shot">
-            <img src="media/dispatch/bakery.jpg" width="1200" height="891" loading="lazy" alt="Dispatch: a pixel-art bakery where every agent session is a little chef" data-i18n-alt="p.dispatchAlt">
+            <img src="media/dispatch/bakery.webp" srcset="media/dispatch/bakery-600.webp 600w, media/dispatch/bakery.webp 1200w" sizes="(max-width: 720px) calc(100vw - 84px), 490px" width="1200" height="891" loading="lazy" alt="Dispatch: a pixel-art bakery where every agent session is a little chef" data-i18n-alt="p.dispatchAlt">
           </div>
           <div class="card-body">
             <h3>Dispatch</h3>
             <p data-i18n="p.dispatch">How I keep all my agents organised. Every Claude Code session becomes a little Bia, a pixel-art mini me in a bakery, so one look tells me which agents are baking, which need me, which are done and which fell asleep. It shows each agent's history and what it's asking me, rings a bakery sound when something changes and keeps my PR review queue alongside. I directed the sprites and animations, and an agent drew them.</p>
             <ul class="bias">
-              <li><img src="media/dispatch/bia_mix.png" width="87" height="117" alt=""><span data-i18n="bia.working">Working</span></li>
-              <li><img src="media/dispatch/bia_document.png" width="90" height="120" alt=""><span data-i18n="bia.waiting">Needs me</span></li>
-              <li><img src="media/dispatch/bia_cake.png" width="92" height="115" alt=""><span data-i18n="bia.done">Done</span></li>
-              <li><img src="media/dispatch/bia_stalled.png" width="158" height="86" alt=""><span data-i18n="bia.paused">Napping</span></li>
+              <li><img src="media/dispatch/bia_mix.webp" width="87" height="117" loading="lazy" alt=""><span data-i18n="bia.working">Working</span></li>
+              <li><img src="media/dispatch/bia_document.webp" width="90" height="120" loading="lazy" alt=""><span data-i18n="bia.waiting">Needs me</span></li>
+              <li><img src="media/dispatch/bia_cake.webp" width="92" height="115" loading="lazy" alt=""><span data-i18n="bia.done">Done</span></li>
+              <li><img src="media/dispatch/bia_stalled.webp" width="158" height="86" loading="lazy" alt=""><span data-i18n="bia.paused">Napping</span></li>
             </ul>
             <ul class="tags">
               <li>Python</li>
@@ -470,8 +470,8 @@
       <span style="--c: var(--lilac)"></span>
     </div>
     <div class="footer-bia">
-      <img class="asleep" src="media/dispatch/bia_stalled.png" width="158" height="86" alt="">
-      <img class="awake" src="media/dispatch/bia_mix.png" width="87" height="117" alt="">
+      <img class="asleep" src="media/dispatch/bia_stalled.webp" width="158" height="86" loading="lazy" alt="">
+      <img class="awake" src="media/dispatch/bia_mix.webp" width="87" height="117" loading="lazy" alt="">
       <span class="zzz" aria-hidden="true">z z z</span>
     </div>
     <p data-i18n="footer">Made by me in Porto, with a little help from Claude.</p>

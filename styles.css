@@ -39,12 +39,12 @@
   --line: #362f4a;
   --card: #262036;
 
-  --pink: #c9688d;
+  --pink: #ce7798;
   --peach: #c98a62;
   --butter: #b89a3a;
-  --mint: #4f9c78;
-  --sky: #4f8ec2;
-  --lilac: #8a72c4;
+  --mint: #52a17c;
+  --sky: #5c97c7;
+  --lilac: #9c88cd;
   --teal: #6cc3cc;
   --shadow: 0 1px 0 var(--line), 0 18px 40px -24px rgb(0 0 0 / 0.7);
   --map-sea: #2b3b58;
@@ -63,12 +63,12 @@
     --line: #362f4a;
     --card: #262036;
 
-    --pink: #c9688d;
+    --pink: #ce7798;
     --peach: #c98a62;
     --butter: #b89a3a;
-    --mint: #4f9c78;
-    --sky: #4f8ec2;
-    --lilac: #8a72c4;
+    --mint: #52a17c;
+    --sky: #5c97c7;
+    --lilac: #9c88cd;
     --teal: #6cc3cc;
     --shadow: 0 1px 0 var(--line), 0 18px 40px -24px rgb(0 0 0 / 0.7);
     --map-sea: #2b3b58;
@@ -623,6 +623,7 @@ h3 {
   margin-top: 18px;
   padding: 8px 18px;
   background: var(--c);
+  color: #2b2340;
   font-size: 0.92rem;
 }
 
@@ -1135,7 +1136,7 @@ body:has(.travel[open]) {
   border: 2px solid var(--ink);
   border-radius: 999px;
   background: var(--c);
-  color: var(--ink);
+  color: #2b2340;
   font-weight: 700;
   text-decoration: none;
   box-shadow: 4px 4px 0 var(--ink);
