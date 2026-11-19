@@ -257,6 +257,27 @@ h3 {
   font-size: clamp(3rem, 8vw, 5.5rem);
 }
 
+.aka {
+  margin: 10px 0 0 4px;
+  font-family: var(--font-hand);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--teal);
+  transform: rotate(-2deg);
+  transform-origin: left;
+}
+
+.place {
+  font-weight: 700;
+  text-decoration-color: var(--teal);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.place:hover {
+  color: var(--teal);
+}
+
 .lead {
   max-width: 34ch;
   margin: 22px 0 30px;
@@ -480,9 +501,7 @@ h3 {
 }
 
 .card-feature {
-  display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: 1.35fr 1fr;
 }
 
 .card-feature:hover {
@@ -490,16 +509,35 @@ h3 {
 }
 
 .card-shot {
-  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
   background: color-mix(in srgb, var(--c) 45%, var(--card));
 }
 
 .card-shot img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left top;
+  height: auto;
+}
+
+.card-feature .card-body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-areas:
+    "title bias"
+    "text bias"
+    "tags bias";
+  grid-template-rows: auto auto 1fr;
+  gap: 0 32px;
+}
+
+.card-feature h3 { grid-area: title; }
+.card-feature .card-body > p { grid-area: text; }
+.card-feature .tags { grid-area: tags; }
+
+.card-feature .bias {
+  grid-area: bias;
+  align-self: center;
+  margin: 0;
 }
 
 .bias {
@@ -682,13 +720,17 @@ h3 {
     max-width: 520px;
   }
 
-  .card-feature {
+  .card-feature .card-body {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "text"
+      "bias"
+      "tags";
   }
 
-  .card-shot {
-    border-right: 0;
-    border-bottom: 2px solid var(--ink);
+  .card-feature .bias {
+    margin: 0 0 18px;
   }
 
   .about-grid {
