@@ -27,6 +27,7 @@ const translations = {
     "tag.browser": "Corre no browser",
     "tag.brands": "11 marcas de marcadores",
     "tag.pwa": "App no ecrã principal",
+    "p.open": "Experimenta",
     "projects.more": "Trabalho mais antigo, sobretudo projetos da FEUP, está no",
     "contact.title": "Diz olá",
     "contact.sub": "A melhor forma de falar comigo é por email ou LinkedIn.",
