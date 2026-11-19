@@ -20,6 +20,10 @@
   --map-visited-edge: #2b2340;
 
   --radius: 22px;
+  --card-radius: 18px;
+  --card-shadow: 5px 5px 0 var(--ink);
+  --card-shadow-hover: 8px 8px 0 var(--ink);
+  --tilt: 0.8deg;
   --shadow: 0 1px 0 var(--line), 0 18px 40px -24px rgb(43 35 64 / 0.35);
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
@@ -493,20 +497,23 @@ h3 {
   gap: 8px;
   padding: 16px 18px 18px;
   border: 2px solid var(--ink);
-  border-radius: 16px;
+  border-radius: var(--card-radius);
   background: var(--card);
-  box-shadow: 4px 4px 0 var(--ink);
+  box-shadow: var(--card-shadow);
   font-size: 0.95rem;
   line-height: 1.45;
-  transform: rotate(-0.6deg);
+  transform: rotate(calc(var(--tilt) * -1));
 }
 
 .facts li:nth-child(even) {
-  transform: rotate(0.6deg);
+  transform: rotate(var(--tilt));
 }
 
-.facts .fact-label {
+.facts .fact-label,
+.job .when,
+.tool-group .fact-label {
   justify-self: start;
+  display: inline-block;
   padding: 2px 10px;
   border-radius: 6px;
   background: var(--c);
@@ -535,15 +542,24 @@ h3 {
   flex-direction: column;
   overflow: hidden;
   border: 2px solid var(--ink);
-  border-radius: var(--radius);
+  border-radius: var(--card-radius);
   background: var(--card);
-  box-shadow: 6px 6px 0 var(--ink);
+  box-shadow: var(--card-shadow);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card:hover {
-  transform: translate(-3px, -3px) rotate(-0.4deg);
-  box-shadow: 9px 9px 0 var(--ink);
+.card:not(.card-feature):nth-child(odd) {
+  transform: rotate(calc(var(--tilt) * -1));
+}
+
+.card:not(.card-feature):nth-child(even) {
+  transform: rotate(var(--tilt));
+}
+
+.card:hover,
+.card:not(.card-feature):hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .card-art {
@@ -609,10 +625,6 @@ h3 {
   grid-template-columns: 1.1fr 1fr;
 }
 
-.card-feature:hover {
-  transform: translate(-3px, -3px);
-}
-
 .card-shot {
   display: flex;
   align-items: center;
@@ -648,8 +660,8 @@ h3 {
   flex-direction: column;
   gap: 4px;
   align-items: center;
-  font-family: "Caveat", cursive;
-  font-size: 1.15rem;
+  font-size: 0.85rem;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -678,23 +690,20 @@ h3 {
 /* Work */
 
 .job {
-  max-width: 860px;
   margin-top: 28px;
-  padding: 26px 28px 28px;
+  padding: 24px 28px 28px;
   border: 2px solid var(--ink);
-  border-left: 14px solid var(--c);
-  border-radius: var(--radius);
+  border-radius: var(--card-radius);
   background: var(--card);
-  box-shadow: 6px 6px 0 var(--ink);
+  box-shadow: var(--card-shadow);
 }
 
 .when {
-  margin: 0 0 4px;
+  margin: 0 0 12px;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-soft);
 }
 
 .job h3 {
@@ -829,28 +838,24 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
-  max-width: 860px;
   margin-top: 16px;
 }
 
 .tool-group {
   padding: 16px 18px 20px;
   border: 2px solid var(--ink);
-  border-radius: 16px;
+  border-radius: var(--card-radius);
   background: var(--card);
-  box-shadow: 4px 4px 0 var(--ink);
-  transform: rotate(-0.6deg);
+  box-shadow: var(--card-shadow);
+  transform: rotate(calc(var(--tilt) * -1));
 }
 
 .tool-group + .tool-group {
-  transform: rotate(0.6deg);
+  transform: rotate(var(--tilt));
 }
 
 .tool-group .fact-label {
-  display: inline-block;
   margin: 0 0 12px;
-  padding: 2px 10px;
-  border-radius: 6px;
   background: var(--ink);
   color: var(--paper);
 }
@@ -883,19 +888,20 @@ h3 {
   flex-direction: column;
   overflow: hidden;
   border: 2px solid var(--ink);
-  border-radius: 16px;
+  border-radius: var(--card-radius);
   background: var(--card);
-  box-shadow: 5px 5px 0 var(--ink);
-  transform: rotate(-1.5deg);
-  transition: transform 0.2s;
+  box-shadow: var(--card-shadow);
+  transform: rotate(calc(var(--tilt) * -1));
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .postcard:nth-child(even) {
-  transform: rotate(1.5deg) translateY(8px);
+  transform: rotate(var(--tilt));
 }
 
 .postcard:hover {
-  transform: rotate(0) translateY(-4px);
+  transform: translate(-3px, -3px);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .postcard-art {
@@ -919,14 +925,12 @@ h3 {
 }
 
 .postcard h3 {
-  font-family: var(--font-hand);
-  font-size: 2.1rem;
-  letter-spacing: 0;
+  font-size: 1.3rem;
 }
 
 .postcard p {
   flex: 1;
-  margin: 6px 0 0;
+  margin: 8px 0 0;
   font-size: 0.95rem;
   line-height: 1.55;
   color: var(--ink-soft);
