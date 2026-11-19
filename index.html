@@ -1,35 +1,213 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<link rel="stylesheet" href="index.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beatriz Mendes</title>
+  <meta name="description" content="Beatriz Mendes, developer in Porto. About me and things I've built.">
+  <meta property="og:title" content="Beatriz Mendes">
+  <meta property="og:description" content="Developer in Porto. About me and things I've built.">
+  <meta property="og:image" content="https://biam05.github.io/media/me.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="Beatriz Mendes">bm<span class="dot"></span></a>
+    <nav class="nav">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    </div>
+  </header>
 
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker" data-i18n="hero.kicker">Hi, I'm</p>
+        <h1><span class="hl hl-pink">Beatriz</span> Mendes</h1>
+        <p class="lead" data-i18n="hero.lead">Developer at Teamtailor, in Porto. I build product features by day and small tools for my own life the rest of the time.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ink" href="#projects" data-i18n="hero.cta">See what I've built</a>
+          <a class="btn btn-ghost" href="#contact" data-i18n="hero.contact">Say hi</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <span class="blob blob-1" aria-hidden="true"></span>
+        <span class="blob blob-2" aria-hidden="true"></span>
+        <span class="blob blob-3" aria-hidden="true"></span>
+        <img src="media/me.jpg" width="720" height="720" alt="Beatriz smiling in a garden" data-i18n-alt="hero.photoAlt">
+        <figcaption class="note" data-i18n="hero.note">that's me!</figcaption>
+      </figure>
+    </section>
 
-		<!-- Bootstrap CSS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <div class="swatches" aria-hidden="true">
+      <span style="--c: var(--pink)"></span>
+      <span style="--c: var(--peach)"></span>
+      <span style="--c: var(--butter)"></span>
+      <span style="--c: var(--mint)"></span>
+      <span style="--c: var(--sky)"></span>
+      <span style="--c: var(--lilac)"></span>
+    </div>
 
-		<title>Beatriz Mendes</title>
-	</head>
-	<body>
-		<header class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" id="header">
-			
-			<div id="profile">
-				<img src="media/me.jpeg" alt="" class="img-fluid rounded-circle profile-pic">
-				<h1 class="text-light text-center">Beatriz Mendes</h1>
-			</div>
+    <section id="about" class="section about">
+      <h2><span class="hl hl-butter" data-i18n="about.title">About me</span></h2>
+      <div class="about-grid">
+        <div class="about-body">
+          <p data-i18n="about.p1">I have a master's in Informatics and Computing Engineering from FEUP, and I've been passionate about front-end development and UI/UX design since my student days.</p>
+          <p data-i18n="about.p2">Today I work on Teamtailor's recruitment platform with Ruby on Rails, Ember and TypeScript. I like interfaces that feel calm and clear, and code that's easy for the next person to change.</p>
+          <p data-i18n="about.p3">Outside work I colour with alcohol markers and build small apps for things I actually use: palettes, gifts, release dates.</p>
+        </div>
+        <ul class="facts">
+          <li style="--c: var(--mint)">
+            <span class="fact-label" data-i18n="facts.now">Now</span>
+            <span data-i18n="facts.nowValue">Developer at Teamtailor</span>
+          </li>
+          <li style="--c: var(--sky)">
+            <span class="fact-label" data-i18n="facts.studied">Studied</span>
+            <span data-i18n="facts.studiedValue">MSc Informatics and Computing Engineering, FEUP</span>
+          </li>
+          <li style="--c: var(--lilac)">
+            <span class="fact-label" data-i18n="facts.based">Based in</span>
+            <span>Porto, Portugal</span>
+          </li>
+          <li style="--c: var(--peach)">
+            <span class="fact-label" data-i18n="facts.tools">Usually with</span>
+            <span>Rails · Ember · TypeScript · Next.js</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-			<nav id="navbar" class="nav-menu navbar">
-				<ul>
-					<li>
-						<i class="bi bi-house"></i>
-					</li>
-				</ul>
-			</nav>			
-			
-		</header>
-	</body>
+    <section id="projects" class="section">
+      <h2><span class="hl hl-mint" data-i18n="projects.title">Things I've built</span></h2>
+      <p class="section-sub" data-i18n="projects.sub">Personal projects, made because I wanted them to exist.</p>
+
+      <div class="cards">
+        <article class="card" style="--c: var(--pink)">
+          <div class="card-art" aria-hidden="true">
+            <svg viewBox="0 0 240 120" class="art-markers">
+              <g transform="rotate(-8 120 60)">
+                <rect x="28" y="22" width="26" height="84" rx="9" fill="#F28BB0"/>
+                <rect x="62" y="16" width="26" height="84" rx="9" fill="#FFB38A"/>
+                <rect x="96" y="22" width="26" height="84" rx="9" fill="#F9D86B"/>
+                <rect x="130" y="16" width="26" height="84" rx="9" fill="#7FD3A8"/>
+                <rect x="164" y="22" width="26" height="84" rx="9" fill="#7EC4F5"/>
+                <rect x="198" y="16" width="26" height="84" rx="9" fill="#B49AEB"/>
+                <g fill="var(--ink)" opacity=".85">
+                  <rect x="28" y="22" width="26" height="20" rx="8"/>
+                  <rect x="62" y="16" width="26" height="20" rx="8"/>
+                  <rect x="96" y="22" width="26" height="20" rx="8"/>
+                  <rect x="130" y="16" width="26" height="20" rx="8"/>
+                  <rect x="164" y="22" width="26" height="20" rx="8"/>
+                  <rect x="198" y="16" width="26" height="20" rx="8"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Marker Palettes</h3>
+            <p data-i18n="p.markers">Colour palettes built only from the alcohol and paint markers you own. Add your sets, pick a mood and a harmony, lock the colours you like and share the link or save a PNG.</p>
+            <ul class="tags">
+              <li>JavaScript</li>
+              <li data-i18n="tag.browser">Runs in the browser</li>
+              <li>EN / PT</li>
+              <li data-i18n="tag.brands">11 marker brands</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" style="--c: var(--peach)">
+          <div class="card-art" aria-hidden="true">
+            <svg viewBox="0 0 240 120" class="art-gift">
+              <rect x="70" y="50" width="100" height="58" rx="8" fill="#FFB38A"/>
+              <rect x="62" y="36" width="116" height="22" rx="7" fill="#F28BB0"/>
+              <rect x="112" y="36" width="16" height="72" fill="#F9D86B"/>
+              <path d="M120 36 C 96 6, 76 22, 98 34 Z" fill="none" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round"/>
+              <path d="M120 36 C 144 6, 164 22, 142 34 Z" fill="none" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round"/>
+              <circle cx="40" cy="40" r="6" fill="#7EC4F5"/>
+              <circle cx="200" cy="80" r="5" fill="#7FD3A8"/>
+              <circle cx="206" cy="30" r="4" fill="#B49AEB"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Caderno de Prendas</h3>
+            <p data-i18n="p.prendas">A notebook of gifts given and received, for birthdays, Christmas and every occasion in between. Each gift keeps its links and photos, and it installs on the iPhone home screen like an app.</p>
+            <ul class="tags">
+              <li>Next.js</li>
+              <li>Supabase</li>
+              <li>Vercel</li>
+              <li data-i18n="tag.pwa">Home screen app</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" style="--c: var(--sky)">
+          <div class="card-art" aria-hidden="true">
+            <svg viewBox="0 0 240 120" class="art-calendar">
+              <rect x="56" y="12" width="128" height="100" rx="10" fill="var(--paper)" stroke="var(--ink)" stroke-width="4"/>
+              <rect x="56" y="12" width="128" height="24" rx="10" fill="#7EC4F5"/>
+              <rect x="56" y="26" width="128" height="10" fill="#7EC4F5"/>
+              <g fill="var(--ink)" opacity=".18">
+                <rect x="68" y="46" width="16" height="12" rx="3"/><rect x="90" y="46" width="16" height="12" rx="3"/><rect x="134" y="46" width="16" height="12" rx="3"/><rect x="156" y="46" width="16" height="12" rx="3"/>
+                <rect x="68" y="66" width="16" height="12" rx="3"/><rect x="90" y="66" width="16" height="12" rx="3"/><rect x="112" y="66" width="16" height="12" rx="3"/><rect x="156" y="66" width="16" height="12" rx="3"/>
+                <rect x="68" y="86" width="16" height="12" rx="3"/><rect x="112" y="86" width="16" height="12" rx="3"/><rect x="134" y="86" width="16" height="12" rx="3"/><rect x="156" y="86" width="16" height="12" rx="3"/>
+              </g>
+              <rect x="112" y="46" width="16" height="12" rx="3" fill="#F28BB0"/>
+              <rect x="134" y="66" width="16" height="12" rx="3" fill="#7FD3A8"/>
+              <rect x="90" y="86" width="16" height="12" rx="3" fill="#F9D86B"/>
+              <rect x="20" y="58" width="22" height="30" rx="3" fill="#B49AEB" transform="rotate(-12 31 73)"/>
+              <rect x="200" y="50" width="22" height="30" rx="3" fill="#FFB38A" transform="rotate(10 211 65)"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Release Calendar</h3>
+            <p data-i18n="p.calendar">A watchlist of upcoming books, turned into a calendar feed I subscribe to in Google Calendar. A daily GitHub Action syncs the dates, and a small web app edits the list from my phone. No database.</p>
+            <ul class="tags">
+              <li>TypeScript</li>
+              <li>GitHub Actions</li>
+              <li>iCalendar</li>
+              <li>Vercel</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <p class="more">
+        <span data-i18n="projects.more">Older work, mostly university projects from FEUP, lives on</span>
+        <a href="https://github.com/biam05">GitHub</a>.
+      </p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2><span class="hl hl-lilac" data-i18n="contact.title">Say hi</span></h2>
+      <p class="section-sub" data-i18n="contact.sub">The best way to reach me is by email or LinkedIn.</p>
+      <ul class="links">
+        <li><a class="link-chip" style="--c: var(--pink)" href="mailto:beatrizcsmendes@gmail.com">Email</a></li>
+        <li><a class="link-chip" style="--c: var(--sky)" href="https://www.linkedin.com/in/beatriz-mendes-38279b1a0/">LinkedIn</a></li>
+        <li><a class="link-chip" style="--c: var(--mint)" href="https://github.com/biam05">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="swatches swatches-small" aria-hidden="true">
+      <span style="--c: var(--pink)"></span>
+      <span style="--c: var(--peach)"></span>
+      <span style="--c: var(--butter)"></span>
+      <span style="--c: var(--mint)"></span>
+      <span style="--c: var(--sky)"></span>
+      <span style="--c: var(--lilac)"></span>
+    </div>
+    <p data-i18n="footer">Made by hand in Porto.</p>
+  </footer>
+</body>
 </html>
