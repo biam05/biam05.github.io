@@ -64,6 +64,14 @@ const translations = {
     "offline.read": "Sobretudo romance e romantasy. Gosto tanto que construí um calendário para os próximos lançamentos.",
     "offline.gameTitle": "Jogar",
     "offline.game": "Jogo imenso. Se não estou a ler, provavelmente estou a jogar alguma coisa.",
+    "travel.open": "Onde já estive",
+    "travel.title": "Onde já estive",
+    "travel.count": "países até agora",
+    "travel.close": "Fechar",
+    "travel.world": "do mundo",
+    "travel.hint": "Passa por cima ou toca num país para ver o nome.",
+    "travel.visited": "Já fui",
+    "travel.notYet": "Ainda não",
     "lost.title": "Esta página foi dormir",
     "lost.sub": "Não encontrei o que procuras. Volta ao início, que lá está tudo acordado.",
     "lost.home": "Voltar ao início",
@@ -136,3 +144,69 @@ themeButton?.addEventListener("click", () => {
 
 darkQuery.addEventListener("change", syncThemeButton);
 syncThemeButton();
+
+const WORLD_COUNTRIES = 195;
+const travel = document.querySelector(".travel");
+const travelMap = travel?.querySelector(".travel-map");
+const travelTip = travel?.querySelector(".travel-tip");
+
+function translate(key, fallback) {
+  return translations[document.documentElement.lang]?.[key] ?? fallback;
+}
+
+function showTravelCount() {
+  const visited = travelMap.querySelectorAll("path.v").length;
+  travel.querySelector(".travel-num").textContent = visited;
+  travel.querySelector(".travel-pct").textContent = `${Math.round((visited / WORLD_COUNTRIES) * 100)}%`;
+  travel.querySelector(".travel-count").hidden = false;
+}
+
+function moveTravelTip(event) {
+  const box = travelMap.getBoundingClientRect();
+  const x = event.clientX - box.left;
+  travelTip.style.left = `${x}px`;
+  travelTip.style.top = `${event.clientY - box.top}px`;
+  travelTip.classList.toggle("flip", x > box.width - 160);
+}
+
+if (travel) {
+  document.querySelector(".travel-open").addEventListener("click", async () => {
+    travel.showModal();
+    if (travelMap.querySelector("svg")) return;
+    try {
+      const response = await fetch("media/world.svg");
+      if (!response.ok) return;
+      travelMap.insertAdjacentHTML("afterbegin", await response.text());
+      showTravelCount();
+    } catch {}
+  });
+
+  travelMap.addEventListener("pointerover", (event) => {
+    const country = event.target.closest("path");
+    if (!country) return;
+    const visited = country.classList.contains("v");
+    const lang = document.documentElement.lang;
+    travelTip.querySelector("strong").textContent = country.dataset[lang] ?? country.dataset.en;
+    travelTip.querySelector("span").textContent = visited
+      ? translate("travel.visited", "Visited")
+      : translate("travel.notYet", "Not yet");
+    travelTip.classList.toggle("is-visited", visited);
+    travelTip.hidden = false;
+    moveTravelTip(event);
+  });
+  travelMap.addEventListener("pointermove", (event) => {
+    if (!travelTip.hidden) moveTravelTip(event);
+  });
+  travelMap.addEventListener("pointerout", (event) => {
+    if (event.pointerType === "touch") return;
+    if (!event.relatedTarget?.closest?.(".travel-map path")) travelTip.hidden = true;
+  });
+  travelMap.addEventListener("pointerdown", (event) => {
+    if (!event.target.closest("path")) travelTip.hidden = true;
+  });
+
+  travel.querySelector(".travel-close").addEventListener("click", () => travel.close());
+  travel.addEventListener("click", (event) => {
+    if (event.target === travel) travel.close();
+  });
+}

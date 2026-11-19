@@ -272,7 +272,7 @@
 
       <p class="more">
         <span data-i18n="projects.more">Older work, mostly university projects from</span> <a class="place" href="https://www.up.pt/feup/" target="_blank" rel="noopener">FEUP</a><span data-i18n="projects.moreB">, lives on</span>
-        <a href="https://github.com/biam05">GitHub</a>.
+        <a href="https://github.com/biam05" target="_blank" rel="noopener">GitHub</a>.
       </p>
     </section>
 
@@ -305,6 +305,7 @@
           <div class="postcard-body">
             <h3 data-i18n="offline.travelTitle">Travelling</h3>
             <p data-i18n="offline.travel">My favourite way to spend time off. I'm always planning the next trip.</p>
+            <button class="postcard-link travel-open" type="button"><span data-i18n="travel.open">Where I've been</span> <span aria-hidden="true">&#8594;</span></button>
           </div>
         </li>
         <li class="postcard" style="--c: var(--peach)">
@@ -406,11 +407,28 @@
       <p class="section-sub" data-i18n="contact.sub">The best way to reach me is by email or LinkedIn.</p>
       <ul class="links">
         <li><a class="link-chip" style="--c: var(--pink)" href="mailto:beatrizcsmendes@gmail.com">Email</a></li>
-        <li><a class="link-chip" style="--c: var(--sky)" href="https://www.linkedin.com/in/biamendes1/">LinkedIn</a></li>
-        <li><a class="link-chip" style="--c: var(--mint)" href="https://github.com/biam05">GitHub</a></li>
+        <li><a class="link-chip" style="--c: var(--sky)" href="https://www.linkedin.com/in/biamendes1/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="link-chip" style="--c: var(--mint)" href="https://github.com/biam05" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
     </section>
   </main>
+
+  <dialog class="travel" aria-labelledby="travel-title">
+    <div class="travel-inner">
+      <div class="travel-head">
+        <h2 id="travel-title"><span class="hl hl-sky" data-i18n="travel.title">Where I've been</span></h2>
+        <button class="travel-close" type="button">
+          <span class="sr-only" data-i18n="travel.close">Close</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <p class="travel-count" hidden><strong class="travel-num"></strong> <span data-i18n="travel.count">countries so far</span> &middot; <strong class="travel-pct"></strong> <span data-i18n="travel.world">of the world</span></p>
+      <div class="travel-map">
+        <div class="travel-tip" hidden><strong></strong><span></span></div>
+      </div>
+      <p class="travel-hint" data-i18n="travel.hint">Hover or tap a country to see its name.</p>
+    </div>
+  </dialog>
 
   <footer class="footer">
     <div class="swatches swatches-small" aria-hidden="true">
