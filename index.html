@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beatriz Mendes</title>
-  <meta name="description" content="Beatriz Mendes, full stack developer in Porto. About me, my CV and things I've built.">
+  <meta name="description" content="Beatriz Mendes, full stack developer in Porto. About me, my work and things I've built.">
   <meta property="og:title" content="Beatriz Mendes">
-  <meta property="og:description" content="Full stack developer in Porto. About me, my CV and things I've built.">
+  <meta property="og:description" content="Full stack developer in Porto. About me, my work and things I've built.">
   <meta property="og:image" content="https://biam05.github.io/media/me.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +20,8 @@
     <a class="logo" href="#top" aria-label="Beatriz Mendes">bm<span class="dot"></span></a>
     <nav class="nav">
       <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
       <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#cv" data-i18n="nav.cv">CV</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
@@ -64,7 +64,6 @@
       <div class="about-grid">
         <div class="about-body">
           <p data-i18n="about.p1">I have a master's in Informatics and Computing Engineering from FEUP. Front-end and UI/UX design have been my thing since my student days, and what I care about most is still the experience of the person on the other side of the screen.</p>
-          <p data-i18n="about.p2">I've been at Teamtailor since 2023, first as a trainee and now as a full stack developer on the recruitment platform. I work with Ruby on Rails, Ember.js and TypeScript, from the design all the way to the implementation.</p>
           <p data-i18n="about.p3">My interest in AI and agentic development keeps growing. I work with Claude Code and OpenAI Codex, write custom skills for them, and love trying new things. That's how my side projects start: small tools that help me at work and with my hobbies, like colouring with alcohol markers.</p>
         </div>
         <ul class="facts">
@@ -85,6 +84,36 @@
             <span>Rails · Ember · TypeScript · Claude Code</span>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <h2><span class="hl hl-sky" data-i18n="work.title">What I do now</span></h2>
+
+      <article class="job" style="--c: var(--sky)">
+        <p class="when" data-i18n="work.when">Since May 2024</p>
+        <h3>Full Stack Developer <span class="at">@ Teamtailor</span></h3>
+        <p data-i18n="work.p1">I build features for Teamtailor's recruitment platform, from the design all the way to the implementation, with an eye on usability, performance and quality.</p>
+        <p data-i18n="work.p2">We work in Shape Up cycles, and agentic coding with Claude Code and OpenAI Codex is a big part of how I build.</p>
+        <ul class="tags">
+          <li>Ruby on Rails</li>
+          <li>Ember.js</li>
+          <li>TypeScript</li>
+          <li>Stimulus</li>
+          <li>Pusher</li>
+          <li>Claude Code</li>
+          <li>OpenAI Codex</li>
+        </ul>
+      </article>
+
+      <div class="before">
+        <p class="fact-label" data-i18n="work.before">Before that</p>
+        <ul>
+          <li data-i18n="work.trainee">Developer Trainee at Teamtailor, 2023 to 2024</li>
+          <li data-i18n="work.thesis">Master's thesis internship at Zerozero.pt, 2023</li>
+          <li data-i18n="work.msc">MSc in Informatics and Computing Engineering, FEUP, 2023</li>
+        </ul>
+        <a class="more-link" href="https://www.linkedin.com/in/biamendes1/" target="_blank" rel="noopener"><span data-i18n="work.linkedin">The rest is on LinkedIn</span> <span aria-hidden="true">&#8599;</span></a>
       </div>
     </section>
 
@@ -187,110 +216,6 @@
         <span data-i18n="projects.more">Older work, mostly university projects from FEUP, lives on</span>
         <a href="https://github.com/biam05">GitHub</a>.
       </p>
-    </section>
-
-    <section id="cv" class="section cv">
-      <h2><span class="hl hl-sky" data-i18n="cv.title">CV</span></h2>
-      <p class="section-sub" data-i18n="cv.sub">Where I've worked, what I studied and what I work with.</p>
-
-      <div class="cv-grid">
-        <div class="cv-main">
-          <h3 class="cv-heading" data-i18n="cv.experience">Experience</h3>
-          <ol class="timeline">
-            <li style="--c: var(--pink)">
-              <p class="when" data-i18n="cv.job1.when">May 2024 to now</p>
-              <h4>Full Stack Developer</h4>
-              <p class="where" data-i18n="cv.job1.where">Teamtailor · Remote</p>
-              <p class="desc" data-i18n="cv.job1.desc">I build features for Teamtailor's recruitment platform with Ruby on Rails, Ember.js, TypeScript, Stimulus and Pusher, with an eye on usability, performance and quality. We work in Shape Up cycles, and agentic coding with Claude Code and OpenAI Codex is part of how I work. I also built Teamtailor's 2024 recruitment highlights as part of a pair.</p>
-            </li>
-            <li style="--c: var(--peach)">
-              <p class="when" data-i18n="cv.job2.when">Oct 2023 to Apr 2024</p>
-              <h4>Developer Trainee</h4>
-              <p class="where">Teamtailor</p>
-              <p class="desc" data-i18n="cv.job2.desc">Six months learning the platform with a mentor and a team of developers and design. I worked with Rails, Ember, TypeScript, Stimulus, the AWS Chime SDK and Pusher, and finished a project on my own.</p>
-            </li>
-            <li style="--c: var(--butter)">
-              <p class="when" data-i18n="cv.job3.when">Feb to Jul 2023</p>
-              <h4 data-i18n="cv.job3.role">Master's thesis internship</h4>
-              <p class="where">Zerozero.pt</p>
-              <p class="desc" data-i18n="cv.job3.desc">Automatic websites for football clubs outside the first league. PHP, Laravel, HTML, CSS, SQL and Zeplin.</p>
-            </li>
-          </ol>
-
-          <h3 class="cv-heading" data-i18n="cv.education">Education</h3>
-          <ol class="timeline">
-            <li style="--c: var(--mint)">
-              <p class="when" data-i18n="cv.edu1.when">2021 to 2023</p>
-              <h4 data-i18n="cv.edu1.title">MSc, Informatics and Computing Engineering</h4>
-              <p class="where" data-i18n="cv.feup">FEUP · University of Porto</p>
-              <p class="desc"><span data-i18n="cv.grade">Final grade</span> 17/20</p>
-            </li>
-            <li style="--c: var(--sky)">
-              <p class="when" data-i18n="cv.edu2.when">2018 to 2021</p>
-              <h4 data-i18n="cv.edu2.title">BSc, Informatics and Computing Engineering</h4>
-              <p class="where" data-i18n="cv.feup">FEUP · University of Porto</p>
-              <p class="desc"><span data-i18n="cv.grade">Final grade</span> 15/20</p>
-            </li>
-            <li style="--c: var(--lilac)">
-              <p class="when" data-i18n="cv.edu3.when">2015 to 2018</p>
-              <h4 data-i18n="cv.edu3.title">High school, Science and Technology</h4>
-              <p class="where">Colégio Novo da Maia</p>
-              <p class="desc"><span data-i18n="cv.grade">Final grade</span> 19/20</p>
-            </li>
-          </ol>
-        </div>
-
-        <aside class="cv-side">
-          <div class="cv-card">
-            <h3 class="cv-heading" data-i18n="cv.skills">Skills</h3>
-            <p class="fact-label" data-i18n="cv.skills.daily">Every day</p>
-            <ul class="tags" style="--c: var(--pink)">
-              <li>Ruby on Rails</li>
-              <li>Ember.js</li>
-              <li>TypeScript</li>
-              <li>JavaScript</li>
-              <li>Stimulus</li>
-              <li>Pusher</li>
-              <li>HTML &amp; CSS</li>
-            </ul>
-            <p class="fact-label" data-i18n="cv.skills.ai">AI and design</p>
-            <ul class="tags" style="--c: var(--lilac)">
-              <li>Claude Code</li>
-              <li>OpenAI Codex</li>
-              <li data-i18n="cv.skills.agentic">Agentic development</li>
-              <li>Figma</li>
-            </ul>
-            <p class="fact-label" data-i18n="cv.skills.before">Also used</p>
-            <ul class="tags" style="--c: var(--mint)">
-              <li>Vue.js</li>
-              <li>React</li>
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>Python</li>
-              <li>C++</li>
-            </ul>
-          </div>
-
-          <div class="cv-card">
-            <h3 class="cv-heading" data-i18n="cv.langs">Languages</h3>
-            <ul class="langs">
-              <li><span data-i18n="cv.lang.pt">Portuguese</span><span class="level" data-i18n="cv.lang.native">Native</span></li>
-              <li><span data-i18n="cv.lang.en">English</span><span class="level" data-i18n="cv.lang.full">Full professional</span></li>
-              <li><span data-i18n="cv.lang.es">Spanish</span><span class="level" data-i18n="cv.lang.work">Professional working</span></li>
-            </ul>
-          </div>
-
-          <div class="cv-card">
-            <h3 class="cv-heading" data-i18n="cv.also">Also</h3>
-            <ul class="also">
-              <li data-i18n="cv.talkabit">Programme team for the 11th edition of Talk a Bit, a tech conference at FEUP (2022 to 2023)</li>
-              <li>Cambridge English: Preliminary (PET) for Schools, 2016</li>
-            </ul>
-          </div>
-
-          <a class="btn btn-ghost cv-linkedin" href="https://www.linkedin.com/in/biamendes1/" target="_blank" rel="noopener"><span data-i18n="cv.linkedin">Full profile on LinkedIn</span> <span aria-hidden="true">&#8599;</span></a>
-        </aside>
-      </div>
     </section>
 
     <section id="contact" class="section contact">
