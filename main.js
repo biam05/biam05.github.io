@@ -3,7 +3,9 @@ const translations = {
     "nav.about": "Sobre mim",
     "nav.projects": "Projetos",
     "nav.work": "Trabalho",
+    "nav.offline": "Fora do trabalho",
     "nav.contact": "Contacto",
+    "theme.dark": "Modo escuro",
     "hero.kicker": "Olá, sou a",
     "hero.aka": "mas podes chamar-me Bia",
     "hero.leadA": "Full stack developer na",
@@ -23,8 +25,11 @@ const translations = {
     "facts.tools": "Normalmente com",
     "work.title": "O que faço agora",
     "work.when": "Desde maio de 2024",
-    "work.p1": "Construo features para a plataforma de recrutamento da Teamtailor do início ao fim, com muita atenção ao design, à usabilidade, à performance e à qualidade.",
+    "work.p1": "Construo features para a plataforma de recrutamento da Teamtailor do início ao fim, sobretudo em Ruby on Rails e Ember.js, com muita atenção ao design, à usabilidade, à performance e à qualidade.",
     "work.p2": "Trabalhamos em ciclos de Shape Up, e agentic coding com Claude Code e OpenAI Codex é uma grande parte da forma como construo.",
+    "tools.work": "No trabalho",
+    "tools.side": "Nos projetos pessoais",
+    "tools.skills": "Skills para agents",
     "work.before": "Antes disso",
     "work.trainee": "Developer Trainee na",
     "work.traineeWhen": ", 2023 a 2024",
@@ -46,6 +51,22 @@ const translations = {
     "p.open": "Experimenta",
     "projects.more": "Trabalho mais antigo, sobretudo projetos da",
     "projects.moreB": ", está no",
+    "offline.title": "Fora do trabalho",
+    "offline.sub": "O que ando a fazer quando fecho o portátil (ou não... certo?)",
+    "offline.travelTitle": "Viajar",
+    "offline.travel": "A minha forma preferida de passar o tempo livre. Estou sempre a planear a próxima viagem.",
+    "offline.foodTitle": "Restaurantes",
+    "offline.food": "Experimentar sítios novos para comer, no Porto e onde quer que viaje.",
+    "offline.musicTitle": "Música",
+    "offline.music": "Sempre a tocar. Faço playlists para tudo: viagens, estados de espírito, estações do ano.",
+    "offline.spotify": "O meu Spotify",
+    "offline.readTitle": "Ler",
+    "offline.read": "Sobretudo romance e romantasy. Gosto tanto que construí um calendário para os próximos lançamentos.",
+    "offline.gameTitle": "Jogar",
+    "offline.game": "Jogo imenso. Se não estou a ler, provavelmente estou a jogar alguma coisa.",
+    "lost.title": "Esta página foi dormir",
+    "lost.sub": "Não encontrei o que procuras. Volta ao início, que lá está tudo acordado.",
+    "lost.home": "Voltar ao início",
     "contact.title": "Diz olá",
     "contact.sub": "A melhor forma de falar comigo é por email ou LinkedIn.",
     "footer": "Feito por mim no Porto, com uma ajudinha do Claude.",
@@ -92,3 +113,26 @@ for (const button of buttons) {
 }
 
 setLanguage(initialLanguage());
+
+const themeButton = document.querySelector(".theme");
+const darkQuery = matchMedia("(prefers-color-scheme: dark)");
+
+function currentTheme() {
+  return document.documentElement.dataset.theme ?? (darkQuery.matches ? "dark" : "light");
+}
+
+function syncThemeButton() {
+  themeButton?.setAttribute("aria-pressed", String(currentTheme() === "dark"));
+}
+
+themeButton?.addEventListener("click", () => {
+  const next = currentTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try {
+    localStorage.setItem("theme", next);
+  } catch {}
+  syncThemeButton();
+});
+
+darkQuery.addEventListener("change", syncThemeButton);
+syncThemeButton();

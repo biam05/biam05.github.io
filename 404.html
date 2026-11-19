@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Beatriz Mendes</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script>try{const t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch{}</script>
+  <script src="/main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="/" aria-label="Beatriz Mendes">bm<span class="dot"></span></a>
+    <div class="lang" role="group" aria-label="Language" style="margin-left: auto">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    </div>
+    <button class="theme" type="button" aria-pressed="false">
+      <span class="sr-only" data-i18n="theme.dark">Dark mode</span>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="lost">
+      <div>
+        <img class="bia-big" src="/media/dispatch/bia_stalled.png" width="158" height="86" alt="">
+        <h1><span class="hl hl-butter" data-i18n="lost.title">This page fell asleep</span></h1>
+        <p data-i18n="lost.sub">I couldn't find what you're looking for. Head back home, everyone's awake there.</p>
+        <a class="btn btn-ink" href="/" data-i18n="lost.home">Back home</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

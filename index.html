@@ -7,12 +7,18 @@
   <meta name="description" content="Beatriz Mendes, full stack developer in Porto. About me, my work and things I've built.">
   <meta property="og:title" content="Beatriz Mendes">
   <meta property="og:description" content="Full stack developer in Porto. About me, my work and things I've built.">
-  <meta property="og:image" content="https://biam05.github.io/media/me.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://biam05.github.io/">
+  <meta property="og:image" content="https://biam05.github.io/media/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>try{const t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch{}</script>
   <script src="main.js" defer></script>
 </head>
 <body>
@@ -22,12 +28,18 @@
       <a href="#about" data-i18n="nav.about">About</a>
       <a href="#work" data-i18n="nav.work">Work</a>
       <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#offline" data-i18n="nav.offline">Off the clock</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="pt" aria-pressed="false">PT</button>
     </div>
+    <button class="theme" type="button" aria-pressed="false">
+      <span class="sr-only" data-i18n="theme.dark">Dark mode</span>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
   </header>
 
   <main id="top">
@@ -94,18 +106,43 @@
       <article class="job" style="--c: var(--sky)">
         <p class="when" data-i18n="work.when">Since May 2024</p>
         <h3>Full Stack Developer <span class="at">@ <a class="place" href="https://www.teamtailor.com" target="_blank" rel="noopener">Teamtailor</a></span></h3>
-        <p data-i18n="work.p1">I build features for Teamtailor's recruitment platform from start to finish, with a keen eye for design, usability, performance and quality.</p>
+        <p data-i18n="work.p1">I build features for Teamtailor's recruitment platform from start to finish, mostly in Ruby on Rails and Ember.js, with a keen eye for design, usability, performance and quality.</p>
         <p data-i18n="work.p2">We work in Shape Up cycles, and agentic coding with Claude Code and OpenAI Codex is a big part of how I build.</p>
-        <ul class="tags">
-          <li>Ruby on Rails</li>
-          <li>Ember.js</li>
-          <li>TypeScript</li>
-          <li>Stimulus</li>
-          <li>Pusher</li>
-          <li>Claude Code</li>
-          <li>OpenAI Codex</li>
-        </ul>
       </article>
+
+      <div class="toolbox">
+        <div class="tool-group" style="--c: var(--sky)">
+          <p class="fact-label" data-i18n="tools.work">At work</p>
+          <ul class="tags">
+            <li>Ruby on Rails</li>
+            <li>Ember.js</li>
+            <li>TypeScript</li>
+            <li>PostgreSQL</li>
+            <li>Turbo &amp; Stimulus</li>
+            <li>Tailwind CSS</li>
+            <li>Pusher</li>
+            <li>Claude Code</li>
+            <li>OpenAI Codex</li>
+          </ul>
+        </div>
+        <div class="tool-group" style="--c: var(--mint)">
+          <p class="fact-label" data-i18n="tools.side">In my side projects</p>
+          <ul class="tags">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Supabase</li>
+            <li>Vercel</li>
+            <li>Cloudflare Workers</li>
+            <li>GitHub Actions</li>
+            <li>PWAs</li>
+            <li>HTML &amp; CSS</li>
+            <li data-i18n="tools.skills">Custom agent skills</li>
+          </ul>
+        </div>
+      </div>
 
       <div class="before">
         <p class="fact-label" data-i18n="work.before">Before that</p>
@@ -239,6 +276,131 @@
       </p>
     </section>
 
+    <section id="offline" class="section">
+      <h2><span class="hl hl-pink" data-i18n="offline.title">Off the clock</span></h2>
+      <p class="section-sub" data-i18n="offline.sub">What I'm up to when I close the laptop (or not... right?)</p>
+
+      <ul class="postcards">
+        <li class="postcard" style="--c: var(--sky)">
+          <div class="postcard-art" aria-hidden="true">
+            <svg viewBox="0 0 240 120">
+              <g transform="rotate(10 182 48)">
+                <rect x="150" y="28" width="64" height="40" rx="6" fill="#7EC4F5"/>
+                <path d="M172 32 V64" stroke="var(--ink)" stroke-width="3" stroke-dasharray="5 5" opacity=".45"/>
+              </g>
+              <g transform="rotate(-4 120 66)">
+                <path d="M100 34 V26 A6 6 0 0 1 106 20 H134 A6 6 0 0 1 140 26 V34" fill="none" stroke="var(--ink)" stroke-width="5"/>
+                <rect x="70" y="34" width="100" height="68" rx="12" fill="#FFB38A"/>
+                <rect x="90" y="34" width="10" height="68" fill="#F9D86B"/>
+                <rect x="140" y="34" width="10" height="68" fill="#F9D86B"/>
+                <circle cx="120" cy="58" r="10" fill="#F28BB0"/>
+                <rect x="106" y="76" width="26" height="14" rx="3" fill="#7FD3A8" transform="rotate(-8 119 83)"/>
+                <circle cx="86" cy="108" r="5" fill="var(--ink)"/>
+                <circle cx="154" cy="108" r="5" fill="var(--ink)"/>
+              </g>
+              <circle cx="38" cy="38" r="6" fill="#B49AEB"/>
+              <circle cx="34" cy="92" r="4" fill="#7FD3A8"/>
+            </svg>
+          </div>
+          <div class="postcard-body">
+            <h3 data-i18n="offline.travelTitle">Travelling</h3>
+            <p data-i18n="offline.travel">My favourite way to spend time off. I'm always planning the next trip.</p>
+          </div>
+        </li>
+        <li class="postcard" style="--c: var(--peach)">
+          <div class="postcard-art" aria-hidden="true">
+            <svg viewBox="0 0 240 120">
+              <ellipse cx="108" cy="88" rx="74" ry="22" fill="#FFF8EE" stroke="var(--ink)" stroke-width="4"/>
+              <path d="M70 82 Q110 68 150 82 L112 22 Z" fill="#F9D86B"/>
+              <path d="M68 84 Q110 66 152 84" fill="none" stroke="#FFB38A" stroke-width="12" stroke-linecap="round"/>
+              <circle cx="104" cy="58" r="7" fill="#F28BB0"/>
+              <circle cx="126" cy="68" r="6" fill="#F28BB0"/>
+              <circle cx="112" cy="40" r="5" fill="#F28BB0"/>
+              <path d="M184 24 H218 C218 54 184 54 184 24 Z" fill="#B49AEB"/>
+              <path d="M201 46 V86 M189 88 H213" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="32" cy="34" r="6" fill="#7EC4F5"/>
+              <circle cx="30" cy="98" r="4" fill="#7FD3A8"/>
+            </svg>
+          </div>
+          <div class="postcard-body">
+            <h3 data-i18n="offline.foodTitle">Restaurants</h3>
+            <p data-i18n="offline.food">Trying new places to eat, in Porto and wherever I travel.</p>
+          </div>
+        </li>
+        <li class="postcard" style="--c: var(--mint)">
+          <div class="postcard-art" aria-hidden="true">
+            <svg viewBox="0 0 240 120">
+              <g transform="rotate(-6 120 66)">
+                <rect x="54" y="26" width="132" height="80" rx="10" fill="#B49AEB"/>
+                <rect x="66" y="36" width="108" height="36" rx="5" fill="#FFF8EE"/>
+                <path d="M78 43 H162" stroke="#F28BB0" stroke-width="4" stroke-linecap="round"/>
+                <rect x="88" y="50" width="64" height="16" rx="8" fill="var(--ink)"/>
+                <circle cx="100" cy="58" r="5" fill="var(--paper)"/>
+                <circle cx="140" cy="58" r="5" fill="var(--paper)"/>
+                <path d="M84 106 L92 88 H148 L156 106 Z" fill="var(--ink)" opacity=".25"/>
+              </g>
+              <circle cx="206" cy="80" r="8" fill="#F28BB0"/>
+              <path d="M213 80 V42 Q226 46 224 60" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="30" cy="62" r="7" fill="#7EC4F5"/>
+              <path d="M36 62 V30" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="40" cy="100" r="4" fill="#F9D86B"/>
+            </svg>
+          </div>
+          <div class="postcard-body">
+            <h3 data-i18n="offline.musicTitle">Music</h3>
+            <p data-i18n="offline.music">Always on. I make playlists for everything: trips, moods, seasons.</p>
+            <a class="postcard-link" href="https://open.spotify.com/user/bia.m" target="_blank" rel="noopener"><span data-i18n="offline.spotify">My Spotify</span> <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </li>
+        <li class="postcard" style="--c: var(--pink)">
+          <div class="postcard-art" aria-hidden="true">
+            <svg viewBox="0 0 240 120">
+              <rect x="58" y="84" width="124" height="22" rx="4" fill="#7EC4F5"/>
+              <rect x="72" y="84" width="6" height="22" fill="var(--ink)" opacity=".25"/>
+              <g transform="rotate(-4 122 73)">
+                <rect x="68" y="62" width="108" height="22" rx="4" fill="#FFB38A"/>
+                <rect x="160" y="62" width="6" height="22" fill="var(--ink)" opacity=".25"/>
+              </g>
+              <g transform="rotate(3 120 51)">
+                <rect x="62" y="40" width="116" height="22" rx="4" fill="#7FD3A8"/>
+                <rect x="78" y="40" width="6" height="22" fill="var(--ink)" opacity=".25"/>
+              </g>
+              <path d="M122 34 C 104 22, 108 4, 122 15 C 136 4, 140 22, 122 34 Z" fill="#F28BB0" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+              <circle cx="38" cy="40" r="6" fill="#B49AEB"/>
+              <circle cx="204" cy="30" r="5" fill="#F9D86B"/>
+              <circle cx="208" cy="96" r="4" fill="#7FD3A8"/>
+            </svg>
+          </div>
+          <div class="postcard-body">
+            <h3 data-i18n="offline.readTitle">Reading</h3>
+            <p data-i18n="offline.read">Mostly romance and romantasy. I like them so much I built a calendar for the next releases.</p>
+          </div>
+        </li>
+        <li class="postcard" style="--c: var(--lilac)">
+          <div class="postcard-art" aria-hidden="true">
+            <svg viewBox="0 0 240 120">
+              <path d="M80 34 H160 C188 34 202 92 186 101 C173 108 163 86 150 82 H90 C77 86 67 108 54 101 C38 92 52 34 80 34 Z" fill="#7FD3A8"/>
+              <rect x="74" y="54" width="30" height="10" rx="2" fill="var(--ink)"/>
+              <rect x="84" y="44" width="10" height="30" rx="2" fill="var(--ink)"/>
+              <circle cx="148" cy="48" r="6" fill="#F28BB0"/>
+              <circle cx="162" cy="60" r="6" fill="#F9D86B"/>
+              <circle cx="134" cy="60" r="6" fill="#7EC4F5"/>
+              <circle cx="148" cy="72" r="6" fill="#B49AEB"/>
+              <rect x="108" y="50" width="10" height="5" rx="2" fill="var(--ink)" opacity=".5"/>
+              <rect x="122" y="50" width="10" height="5" rx="2" fill="var(--ink)" opacity=".5"/>
+              <circle cx="32" cy="32" r="6" fill="#F9D86B"/>
+              <circle cx="210" cy="28" r="5" fill="#F28BB0"/>
+              <circle cx="214" cy="98" r="4" fill="#7EC4F5"/>
+            </svg>
+          </div>
+          <div class="postcard-body">
+            <h3 data-i18n="offline.gameTitle">Gaming</h3>
+            <p data-i18n="offline.game">I play a lot. If I'm not reading, I'm probably playing something.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
     <section id="contact" class="section contact">
       <h2><span class="hl hl-lilac" data-i18n="contact.title">Say hi</span></h2>
       <p class="section-sub" data-i18n="contact.sub">The best way to reach me is by email or LinkedIn.</p>
@@ -258,6 +420,11 @@
       <span style="--c: var(--mint)"></span>
       <span style="--c: var(--sky)"></span>
       <span style="--c: var(--lilac)"></span>
+    </div>
+    <div class="footer-bia">
+      <img class="asleep" src="media/dispatch/bia_stalled.png" width="158" height="86" alt="">
+      <img class="awake" src="media/dispatch/bia_mix.png" width="87" height="117" alt="">
+      <span class="zzz" aria-hidden="true">z z z</span>
     </div>
     <p data-i18n="footer">Made by me in Porto, with a little help from Claude.</p>
   </footer>
