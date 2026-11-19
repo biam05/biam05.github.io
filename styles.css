@@ -156,14 +156,21 @@ a {
 }
 
 .nav a {
+  padding: 0 0.12em;
   font-weight: 500;
   text-decoration: none;
+  white-space: nowrap;
   color: var(--ink-soft);
   transition: color 0.15s;
 }
 
 .nav a:hover {
   color: var(--ink);
+}
+
+.nav a[aria-current="true"] {
+  color: var(--ink);
+  background: linear-gradient(var(--hl), var(--hl)) 0 88% / 100% 42% no-repeat;
 }
 
 .lang {
@@ -732,7 +739,7 @@ h3 {
 .journey {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   margin: 0;
   padding: 0;
@@ -743,8 +750,8 @@ h3 {
   content: "";
   position: absolute;
   top: 17px;
-  right: 12%;
-  left: 12%;
+  right: 10%;
+  left: 10%;
   border-top: 3px dashed var(--ink);
   opacity: 0.35;
 }
@@ -1252,13 +1259,41 @@ body:has(.travel[open]) {
 }
 
 @media (max-width: 720px) {
+  html {
+    scroll-padding-top: 124px;
+  }
+
   .topbar {
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 10px 12px;
     padding: 12px 16px;
   }
 
   .nav {
+    order: 1;
+    flex-basis: 100%;
+    gap: 8px;
+    margin: 0 -16px;
+    padding: 2px 16px 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
     display: none;
+  }
+
+  .nav a {
+    padding: 3px 12px;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: var(--card);
+    font-size: 0.88rem;
+  }
+
+  .nav a[aria-current="true"] {
+    background: var(--hl);
+    color: #2b2340;
   }
 
   .lang {

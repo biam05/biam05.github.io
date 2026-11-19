@@ -20,10 +20,11 @@ const translations = {
     "facts.now": "Agora",
     "facts.nowValue": "Full Stack Developer na",
     "facts.studied": "Estudei",
-    "facts.studiedValue": "Mestrado em Engenharia Informática e Computação,",
+    "facts.studiedValue": "Licenciatura e Mestrado em Engenharia Informática e Computação,",
     "facts.based": "Vivo em",
     "facts.tools": "Normalmente com",
     "work.title": "O que faço agora",
+    "work.sub": "O meu trabalho, as ferramentas que uso e como cheguei aqui.",
     "work.when": "Desde maio de 2024",
     "work.p1": "Construo features para a plataforma de recrutamento da Teamtailor do início ao fim, sobretudo em Ruby on Rails e Ember.js, com muita atenção ao design, à usabilidade, à performance e à qualidade.",
     "work.p2": "Trabalhamos em ciclos de Shape Up, e agentic coding com Claude Code e OpenAI Codex é uma grande parte da forma como construo.",
@@ -34,6 +35,7 @@ const translations = {
     "tools.ai": "IA",
     "work.before": "Como cheguei aqui",
     "work.thesis": "Estágio de dissertação de mestrado",
+    "work.bsc": "Licenciatura em Engenharia Informática e Computação",
     "work.msc": "Mestrado em Engenharia Informática e Computação",
     "work.now": "Agora",
     "work.linkedin": "O resto está no LinkedIn",
@@ -145,6 +147,41 @@ themeButton?.addEventListener("click", () => {
 
 darkQuery.addEventListener("change", syncThemeButton);
 syncThemeButton();
+
+const nav = document.querySelector(".nav");
+const navLinks = [...document.querySelectorAll(".nav a")];
+const navSections = navLinks.map((link) => document.querySelector(link.hash));
+let navTicking = false;
+let navCurrent = -2;
+
+function markCurrentSection() {
+  navTicking = false;
+  const atBottom = scrollY + innerHeight >= document.documentElement.scrollHeight - 4;
+  let current = atBottom ? navSections.length - 1 : -1;
+  if (!atBottom) {
+    navSections.forEach((section, i) => {
+      if (section && section.getBoundingClientRect().top <= innerHeight * 0.4) current = i;
+    });
+  }
+  if (current === navCurrent) return;
+  navCurrent = current;
+  navLinks.forEach((link, i) => {
+    if (i === current) link.setAttribute("aria-current", "true");
+    else link.removeAttribute("aria-current");
+  });
+  const link = navLinks[current];
+  if (link && nav.scrollWidth > nav.clientWidth) {
+    const left = link.getBoundingClientRect().left - nav.getBoundingClientRect().left + nav.scrollLeft - 16;
+    nav.scrollTo({ left, behavior: "smooth" });
+  }
+}
+
+addEventListener("scroll", () => {
+  if (navTicking) return;
+  navTicking = true;
+  requestAnimationFrame(markCurrentSection);
+}, { passive: true });
+markCurrentSection();
 
 const WORLD_COUNTRIES = 195;
 const travel = document.querySelector(".travel");
