@@ -52,6 +52,7 @@ const translations = {
     "p.prendas": "Um caderno de prendas dadas e recebidas, para aniversários, Natal e todas as ocasiões pelo meio. Cada prenda guarda links e fotos, e instala-se no ecrã principal do iPhone como uma app.",
     "p.calendar": "Uma lista de livros que vão sair, transformada num calendário que subscrevo no Google Calendar. Uma GitHub Action sincroniza as datas todos os dias e uma pequena web app edita a lista a partir do telemóvel. Sem base de dados.",
     "p.open": "Experimenta",
+    "p.markersAlt": "Marker Palettes num telemóvel e num portátil: uma paleta de cinco cores feita com códigos e nomes de marcadores reais",
     "p.wip": "Em construção",
     "p.kairosAlt": "O Kairos num telemóvel e num portátil: notas presas num quadro de cortiça, com um painel que sugere o que fazer agora",
     "p.kairos": "O meu quadro de cortiça pessoal. Despejo o que tenho na cabeça, a IA arruma tudo em cartões e diz-me o que fazer a seguir, conforme o tempo e a energia que tenho. Só para mim, por agora.",
