@@ -52,6 +52,8 @@ const translations = {
     "p.prendas": "Um caderno de prendas dadas e recebidas, para aniversários, Natal e todas as ocasiões pelo meio. Cada prenda guarda links e fotos, e instala-se no ecrã principal do iPhone como uma app.",
     "p.calendar": "Uma lista de livros que vão sair, transformada num calendário que subscrevo no Google Calendar. Uma GitHub Action sincroniza as datas todos os dias e uma pequena web app edita a lista a partir do telemóvel. Sem base de dados.",
     "p.open": "Experimenta",
+    "p.wip": "Em construção",
+    "p.kairos": "O meu quadro de cortiça pessoal. Despejo o que tenho na cabeça, a IA arruma tudo em cartões e diz-me o que fazer a seguir, conforme o tempo e a energia que tenho. Só para mim, por agora.",
     "projects.more": "Trabalho mais antigo, sobretudo projetos da",
     "projects.moreB": ", está no",
     "offline.title": "Fora do trabalho",
